@@ -2,6 +2,7 @@ def main():
     blue()
     blastoff()
     print(candy_shop())
+    fruit_pricing()
 
 def blue(): 
     red = 3
@@ -29,4 +30,17 @@ def candy_shop():
     for candy in all_candies:
         print(candy)
     return (len(all_candies) * 1.25)
+
+def fruit_pricing():
+    fruits ={
+        "apple": 0.75, "banana": 1.25, "orange": 0.8, "peach": 2.25, "coconut": 2.80
+    }
+    fruits ["pear"] = 1.25
+    fruits.get("peach")
+    for i in fruits:
+        if fruits.get(i)>= 1.25:
+            print(i)
+    shoppingtrip = 3*fruits["apple"] + 2*fruits["banana"] + 1*fruits["coconut"]
+    print(shoppingtrip)
+
 main()
